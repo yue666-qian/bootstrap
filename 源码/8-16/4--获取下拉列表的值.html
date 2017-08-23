@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<select id="test">
+			<option value="0" selected="selected">请选择您喜欢的任务</option>
+		    <option value="1">刘备</option>
+		    <option value="2">关羽</option>
+		    <option value="3">张飞</option>
+		</select>
+		<br />
+		<br />
+		<input type='button' value='获取select所有选项' onclick='fun()'/>
+		
+		<script>
+			function fun(){
+			    obj = document.getElementById("test");
+			    str = "";
+			    for(i=0;i<obj.options.length;i++){
+			        str = obj.options[i].text;
+			    }
+			    alert(str);
+			}
+			
+		</script>
+	</body>
+</html>

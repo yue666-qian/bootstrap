@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.beiZ{
+				color:red;
+				font-size:14px;
+				
+				/*隐藏*/
+				/*不占文档流*/
+				display: none;
+				
+				/*隐藏*/
+				/*占据一定的文档流*/
+				/*visibility: hidden;*/
+			}
+		</style>
+		<script type="text/javascript">
+			function onSubmit(){
+				var spans = document.getElementsByClassName('beiZ');
+				if(!addForm.checkB.checked){
+					alert('您没有同意条款!')
+					return false;
+				}
+				if(addForm.nicheng.value==''){
+					spans[0].style.display='block';
+					return false;
+				}
+				if(addForm.pwd.value==''){
+					spans[1].style.display='block';
+					return false;	
+				}
+				if(addForm.repwd.value==''){
+					spans[2].style.display='block';
+					return false;	
+				}	
+				
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="http://www.baidu.com" onsubmit="return onSubmit()" name='addForm' method=''>
+			<span>
+				emai:
+			</span>
+			<input type="text" value='' name='email' placeholder="请输入email地址" id='' class=""/>
+			<br />
+			<span>
+				设置昵称：
+			</span>
+			<input type="text" value='' placeholder="请输入昵称" name='nicheng' required="required"/>
+			<span class="beiZ">
+				*&nbsp;用户名不能为空
+			</span>
+			<span>
+				ahgarhyei 
+			</span>
+			
+			<br />
+			<span>
+				设置密码：
+			</span>
+			<input type="text"  placeholder="请输入密码" name='pwd' />
+			
+			<span class="beiZ">
+				*&nbsp;密码不能为空哦
+			</span>
+			
+			<br />
+			<span>
+				再次输入密码：
+			</span>
+			<input type="text" placeholder="请再次输入密码"  name='repwd'/>
+			
+			<span class="beiZ">
+				*&nbsp;请再次输入密码
+			</span>
+			
+			<br />
+			<span>
+				性别：
+			</span>
+			<input type="radio" name='sex'  value='男' checked="checked"/>男
+			<input type="radio" name='sex'  value='女'/>女
+			<br />
+			<span>爱好：</span>
+			<input type="checkbox"  value='游泳'/>游泳
+			<input type="checkbox" value='体育'/>体育
+			<input type="checkbox" value='看书'/>看书
+			<br />
+			<span>
+				所在地区：
+			</span>
+			<select name="" id="">
+				<option value="">请选择省/城市</option>
+				<option value="北京">北京</option>
+				<option value="江苏">江苏</option>
+			</select>
+			<select name="" id="">
+				<option value="">请选择城市/地区</option>
+				<option value="北京">北京</option>
+				<option value="江苏">江苏</option>
+			</select>
+			<br />
+			<span>注册须知：</span>
+			<textarea name="" rows="" cols="" placeholder="">degerg</textarea>
+			<br />
+			<span>
+				同意以上协议：
+			</span>
+			<input type="checkbox" id='checkB' name='checkB'>
+			<br />
+			<input type="submit"  value='提交'/>
+		</form>
+	</body>
+</html>

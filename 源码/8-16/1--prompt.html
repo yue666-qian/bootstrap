@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			function show(){	
+				//prompt（）---提示，默认输入值
+				var name=prompt('请输入您的名字：' ,'比尔盖茨');
+				if(name!==null&&name!==''){
+					document.write('您好，' + name + '! 今天过得好吗？');
+				}	
+			}
+		</script>
+	</head>
+	<body>
+		<br />
+		<br />
+		<br />
+		<input type="button"  onclick='show()' value='点击问候一下'/>
+	</body>
+</html>

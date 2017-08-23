@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function fun(){
+			    obj = document.getElementsByName("test");
+			    check_val = [];
+			    for(k in obj){
+			        if(obj[k].checked)
+			            check_val.push(obj[k].value);
+			    }
+			    alert('您的爱好是：' + check_val);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" name="test" value="蔬菜"/><span>蔬菜</span>
+		<input type="checkbox" name="test" value="运动"/><span>运动</span>
+		<input type="checkbox" name="test" value="体育"/><span>体育</span>
+		<input type="checkbox" name="test" value="娱乐"/><span>娱乐</span>
+		<input type="checkbox" name="test" value="吃"/><span>吃</span>
+		<br />
+		<br />
+		<input type='button' value='提交' onclick="fun()"/>
+	</body>
+</html>

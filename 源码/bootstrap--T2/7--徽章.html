@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+
+		<style>
+			img{
+				width:100%;
+				height: auto;
+			}
+			#data{
+				/*隐藏完还占有空间,但是没有改变元素的属性*/
+				
+				/*原生写法*/
+				visibility: hidden;
+				
+				/*--jquery写法-----*/
+				/*display: none;*/	
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-8">
+					<h2 class="page-header">
+						徽章
+						<small>按钮徽章</small>
+					</h2>
+					<button class='btn btn-success'>
+						消息  <span class='badge' style='background: red; color:#ffffff'>20</span>
+					</button>
+					<h2 class="page-header">
+						徽章
+						<small>列表徽章</small>
+					</h2>
+					<ul class='nav'>
+						<li><a href="#">
+							消息
+							<span class='badge' style='background: red; color:#ffffff' id='data'>10</span>
+						</a></li>
+					</ul>
+					<br /><br />
+					<button class='btn btn-info' onclick = 'show()'>
+						主银，那个人人又来消息啦！！
+					</button>
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+		</div>	
+		<script type="text/javascript">
+			var flag = 0;//0---代表隐藏；1---代表显示；、
+			function show(){
+				var data  = document.getElementById('data');
+				if(flag==0){
+					data.style.visibility='visible';
+					flag = 1;
+				}else{
+					data.style.visibility = 'hidden';
+					flag = 0;
+				}	
+			}
+			//--jquery写法-----
+			//function show(){
+				//$('#data').toggle();
+			//}
+		</script>
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script type="text/javascript" src='js/bootstrap.min.js'></script>
+	</body>
+</html>

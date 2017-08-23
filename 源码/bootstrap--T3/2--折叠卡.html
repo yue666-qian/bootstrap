@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<style>
+			img{
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-1"></div>
+				<div class="col-sm-10">
+					<h2 class='page-header'>折叠卡</h2>
+					
+					<button class='btn btn-success' data-target='#mydata' data-toggle='collapse'>点击显示信息</button>
+					<div class="collapse in" id='mydata'>
+						昨天我吃了个煎饼果子，老难吃了。<br />
+						昨天我吃了个煎饼果子，老难吃了。<br />
+						昨天我吃了个煎饼果子，老难吃了。<br />
+					</div>
+					
+					
+					<h2 class='page-header'>列表折叠<small>只允许显示一项内容</small></h2>
+					<div class='panel-group' id='zdk'>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								<div class='panel-title'>
+									<a href="#wx" data-toggle='collapse' data-parent='#zdk'>吴昕</a>
+								</div>
+							</div>
+							
+							<div class='panel-collapse collapse' id='wx'>
+								<div class='panel-body collapse in'>
+									《我们相爱吧》播出已经接近尾声，节目中三对明星情侣也各自有了新的发展。
+								</div>
+							</div>
+						</div>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								<div class='panel-title'>
+									<a href="#pwb" data-toggle='collapse' data-parent='#zdk'>潘玮柏</a>
+								</div>
+							</div>
+							
+							<div class='panel-collapse collapse' id='pwb'>
+								<div class='panel-body  collapse in '>
+									潘玮柏成功求爱吴昕，两人忙着唱歌、约会、拍时尚大片，狗粮撒的也是很带劲。
+								</div>
+							</div>
+						</div>
+						<div class='panel panel-info'>
+							<div class='panel-heading'>
+								<div class='panel-title'>
+									<a href="#xn" data-toggle='collapse' data-parent='#zdk'>谢娜</a>
+								</div>
+							</div>
+							
+							<div class='panel-collapse collapse' id='xn'>
+								<div class='panel-body  collapse in'>
+									谢娜为啥不生娃。
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+		</div>
+	
+	<script type="text/javascript" src='js/jquery.min.js'></script>
+	<script src='js/bootstrap.min.js'></script>
+	</body>
+</html>
